@@ -76,4 +76,53 @@ if role == 'admin' or is_member:
     print("Access Granted")
 else:
     print("Access Denied")
+
+number = float(input("Enter the number: "))
+def my_function(number):
+    if number > 0:
+        for i in range(3, 16, 2):
+            print(i)
+        else:
+            print("Number out of range")
+my_function(number)
+#9
+def day_of_the_week(day):
+    match day:
+        case "Saturday" | "Sunday":
+            print("Its weekend")
+        case "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday":
+            print("Its a weekday")
+
+
+day_of_the_week("Monday")
+
+def categorize_number(number):
+    match number:
+        case number if number > 0:
+            print(f"You entered {number}. Its a positive number.")
+        case number if number < 0:
+            print(f"You entered {number}. Its a negative number.")
+        case number if number == 0:
+            print(f"You entered {number}. The number is 0")
+
+
+categorize_number(10)
+categorize_number(-10)
+categorize_number(0)
+
+def type_of_input(input):
+    match input:
+        case str():
+            print("Its a string")
+        case list():
+            print("Its a list")
+        case dict():
+            print("Its a dict")
+        case _:
+            print("Its unknown type")
+
+type_of_input("Hello")
+type_of_input([1,2])
+type_of_input({"Key":"value"})
+type_of_input(5)
 '''
