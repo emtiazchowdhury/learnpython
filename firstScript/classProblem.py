@@ -1,5 +1,5 @@
+from datetime import datetime
 
-# To do Small Problem: Find out the start_date value of DevOps course for Alice from student_info dictionary, your code should also ensure there is DevOps Course.
 student_info = {
     "name": "Alice",
     "age": 30,
@@ -7,14 +7,19 @@ student_info = {
     "is_student": True,
     "courses": [
         {"course_name": "DevOps",
-         "start_date": "05/15/2024"
+         "start_date": "1234"
          },
         {"course_name": "DataAnalytics",
-         "start_date": "01/15/2025"
+         "start_date": "12345"
          }
     ]
 }
-for student in student_info["courses"]:
-    print(student.keys())
-    print(student.values())
-# To do Small Problem: Find out the start_date value of DevOps course for Alice from student_info dictionary, your code should also ensure there is DevOps Course.
+
+student_info = student_info["courses"]
+student_info = student_info[0]["course_name"]
+print(student_info)
+#student_info = student_info[]["start_date"]
+print(student_info)
+# if student_info == "DevOps":
+#     student_info = student_info[0]["course_name"]
+#     print(student_info)
